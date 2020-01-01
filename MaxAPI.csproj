@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{56BC0196-895B-41FD-8B20-CBFDE5CE40F3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MaxAPI</RootNamespace>
+    <AssemblyName>MaxAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthorizationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthorizationDialog.Designer.cs">
+      <DependentUpon>AuthorizationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoogleR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoogleR.Designer.cs">
+      <DependentUpon>GoogleR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Google\Apis\Fun\Google.Apis.AnalyticsReporting.v4.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.PlusDomains.v1.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.QPXExpress.v1.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.Safebrowsing.v4.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.Sheets.v4.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.Slides.v1.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.Speech.v1.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.Translate.v2.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\GoogleJsonWebSignature.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\InvalidJwtException.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\JsonWebSignature.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\JsonWebToken.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\AuthorizationCodeInstalledApp.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\BearerToken.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\ClientSecrets.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\ComputeCredential.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\DefaultCredentialProvider.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\Flows\AuthorizationCodeFlow.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\Flows\GoogleAuthorizationCodeFlow.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\Flows\IAuthorizationCodeFlow.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\GoogleAuthConsts.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\GoogleClientSecrets.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\GoogleCredential.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\GoogleWebAuthorizationBroker.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\IAccessMethod.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\IAuthorizationCodeInstalledApp.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\ICodeReceiver.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\ICredential.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\ITokenAccess.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\JsonCredentialParameters.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\LocalServerCodeReceiver.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\Pkcs8.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\PromptCodeReceiver.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\Requests\AuthorizationCodeRequestUrl.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\Requests\AuthorizationCodeTokenRequest.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\Requests\AuthorizationRequestUrl.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\Requests\GoogleAssertionTokenRequest.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\Requests\GoogleAuthorizationCodeRequestUrl.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\Requests\GoogleRevokeTokenRequest.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\Requests\RefreshTokenRequest.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\Requests\TokenRequest.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\Requests\TokenRequestExtenstions.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\Responses\AuthorizationCodeResponseUrl.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\Responses\TokenErrorResponse.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\Responses\TokenResponse.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\Responses\TokenResponseException.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\ServiceAccountCredential.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\ServiceCredential.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\UserCredential.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\Web\AuthorizationCodeWebApp.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Auth\OAuth2\Web\AuthWebUtility.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.Books.v1.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.Calendar.v3.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\ApplicationContext.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Discovery\DiscoveryVersion.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Discovery\Features.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Discovery\IParameter.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Discovery\Parameter.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\GoogleApiException.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Http\BackOffHandler.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Http\ConfigurableHttpClient.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Http\ConfigurableMessageHandler.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Http\ExponentialBackOffInitializer.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Http\HttpClientFactory.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Http\HttpConsts.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Http\HttpExtenstions.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Http\IConfigurableHttpClientInitializer.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Http\IHttpClientFactory.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Http\IHttpExceptionHandler.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Http\IHttpExecuteInterceptor.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Http\IHttpUnsuccessfulResponseHandler.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Http\MaxUrlLengthInterceptor.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\ISerializer.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Json\IJsonSerializer.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Json\JsonExplicitNull.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Json\JsonExplicitNullAttribute.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Json\NewtonsoftJsonSerializer.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Logging\BaseLogger.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Logging\ConsoleLogger.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Logging\ILogger.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Logging\LogLevel.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Logging\MemoryLogger.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Logging\NullLogger.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Requests\Parameters\ParameterCollection.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Requests\Parameters\ParameterUtils.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Requests\Parameters\ParameterValidator.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Requests\RequestBuilder.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Requests\RequestError.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Requests\SingleError.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Testing\VisibleForTestOnly.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Util\ExponentialBackOff.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Util\IBackOff.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Util\IClock.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Util\Repeatable.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Util\RequestParameterAttribute.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Util\StandardResponse.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Util\Store\IDataStore.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Util\StringValueAttribute.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Util\UriPatcher.cs" />
+    <Compile Include="Google\Apis\Google.Apis.Core\Util\Utilities.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.Drive.v3.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.FirebaseDynamicLinks.v1.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.Games.v1.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.Gmail.v1.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.Playcustomapp.v1.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.Plus.v1.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.Urlshortener.v1.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.Vision.v1.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.YouTube.v3.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.YouTubeAnalytics.v1.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.YouTubeReporting.v1.cs" />
+    <Compile Include="Google\Apis\Google.Apis\Download\IDownloadProgress.cs" />
+    <Compile Include="Google\Apis\Google.Apis\Download\IMediaDownloader.cs" />
+    <Compile Include="Google\Apis\Google.Apis\Download\MediaDownloader.cs" />
+    <Compile Include="Google\Apis\Google.Apis\ETagAction.cs" />
+    <Compile Include="Google\Apis\Google.Apis\Media\MediaApiErrorHandling.cs" />
+    <Compile Include="Google\Apis\Google.Apis\Requests\BatchRequest.cs" />
+    <Compile Include="Google\Apis\Google.Apis\Requests\ClientServiceRequest.cs" />
+    <Compile Include="Google\Apis\Google.Apis\Requests\HttpRequestMessageExtenstions.cs" />
+    <Compile Include="Google\Apis\Google.Apis\Requests\IClientServiceRequest.cs" />
+    <Compile Include="Google\Apis\Google.Apis\Requests\IDirectResponseSchema.cs" />
+    <Compile Include="Google\Apis\Google.Apis\Requests\PageStreamer.cs" />
+    <Compile Include="Google\Apis\Google.Apis\Services\BaseClientService.cs" />
+    <Compile Include="Google\Apis\Google.Apis\Services\IClientService.cs" />
+    <Compile Include="Google\Apis\Google.Apis\Upload\IUploadProgress.cs" />
+    <Compile Include="Google\Apis\Google.Apis\Upload\IUploadSessionData.cs" />
+    <Compile Include="Google\Apis\Google.Apis\Upload\ResumableUpload.cs" />
+    <Compile Include="Google\Apis\Google.Apis\Upload\ResumableUploadOptions.cs" />
+    <Compile Include="Google\Apis\Google.Apis\Util\Store\FileDataStore.cs" />
+    <Compile Include="Google\Apis\Google.Apis\Util\Store\NullDataStore.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.Discovery.v1.cs" />
+    <Compile Include="Google\Apis\Fun\Google.Apis.PeopleService.v1.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Bson\BsonBinaryType.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Bson\BsonBinaryWriter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Bson\BsonObjectId.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Bson\BsonReader.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Bson\BsonToken.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Bson\BsonType.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Bson\BsonWriter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\ConstructorHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Converters\BinaryConverter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Converters\BsonObjectIdConverter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Converters\CustomCreationConverter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Converters\DataSetConverter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Converters\DataTableConverter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Converters\DateTimeConverterBase.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Converters\DiscriminatedUnionConverter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Converters\EntityKeyMemberConverter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Converters\ExpandoObjectConverter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Converters\IsoDateTimeConverter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Converters\JavaScriptDateTimeConverter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Converters\KeyValuePairConverter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Converters\RegexConverter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Converters\StringEnumConverter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Converters\VersionConverter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Converters\XmlNodeConverter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\DateFormatHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\DateParseHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\DateTimeZoneHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\DefaultValueHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\FloatFormatHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\FloatParseHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\FormatterAssemblyStyle.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Formatting.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\IArrayPool.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\IJsonLineInfo.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonArrayAttribute.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonConstructorAttribute.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonContainerAttribute.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonConvert.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonConverter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonConverterAttribute.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonConverterCollection.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonDictionaryAttribute.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonException.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonExtensionDataAttribute.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonIgnoreAttribute.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonObjectAttribute.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonPosition.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonPropertyAttribute.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonReader.Async.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonReader.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonReaderException.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonRequiredAttribute.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonSerializationException.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonSerializer.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonSerializerSettings.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonTextReader.Async.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonTextReader.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonTextWriter.Async.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonTextWriter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonToken.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonValidatingReader.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonWriter.Async.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonWriter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\JsonWriterException.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\CommentHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\Extensions.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\IJEnumerable.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JArray.Async.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JArray.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JConstructor.Async.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JConstructor.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JContainer.Async.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JContainer.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JEnumerable.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JObject.Async.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JObject.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JProperty.Async.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JProperty.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JPropertyDescriptor.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JPropertyKeyedCollection.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JRaw.Async.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JRaw.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JsonLoadSettings.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JsonMergeSettings.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JsonPath\ArrayIndexFilter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JsonPath\ArrayMultipleIndexFilter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JsonPath\ArraySliceFilter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JsonPath\FieldFilter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JsonPath\FieldMultipleFilter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JsonPath\JPath.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JsonPath\PathFilter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JsonPath\QueryExpression.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JsonPath\QueryFilter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JsonPath\QueryScanFilter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JsonPath\RootFilter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JsonPath\ScanFilter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JsonPath\ScanMultipleFilter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JToken.Async.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JToken.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JTokenEqualityComparer.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JTokenReader.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JTokenType.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JTokenWriter.Async.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JTokenWriter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JValue.Async.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\JValue.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\MergeArrayHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Linq\MergeNullValueHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\MemberSerialization.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\MetadataPropertyHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\MissingMemberHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\NullValueHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\ObjectCreationHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\PreserveReferencesHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Properties\AssemblyInfo.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\ReferenceLoopHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Required.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Schema\Extensions.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Schema\JsonSchema.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Schema\JsonSchemaBuilder.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Schema\JsonSchemaConstants.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Schema\JsonSchemaException.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Schema\JsonSchemaGenerator.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Schema\JsonSchemaModel.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Schema\JsonSchemaModelBuilder.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Schema\JsonSchemaNode.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Schema\JsonSchemaNodeCollection.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Schema\JsonSchemaResolver.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Schema\JsonSchemaType.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Schema\JsonSchemaWriter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Schema\UndefinedSchemaIdHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Schema\ValidationEventArgs.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Schema\ValidationEventHandler.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\SerializationBinder.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\CachedAttributeGetter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\CamelCaseNamingStrategy.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\CamelCasePropertyNamesContractResolver.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\DefaultContractResolver.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\DefaultNamingStrategy.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\DefaultReferenceResolver.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\DefaultSerializationBinder.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\DiagnosticsTraceWriter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\DynamicValueProvider.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\ErrorContext.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\ErrorEventArgs.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\ExpressionValueProvider.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\FormatterConverter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\IAttributeProvider.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\IContractResolver.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\IReferenceResolver.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\ISerializationBinder.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\ITraceWriter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\IValueProvider.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\JsonArrayContract.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\JsonContainerContract.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\JsonContract.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\JsonDictionaryContract.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\JsonDynamicContract.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\JsonFormatterConverter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\JsonISerializableContract.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\JsonLinqContract.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\JsonObjectContract.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\JsonPrimitiveContract.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\JsonProperty.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\JsonPropertyCollection.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\JsonSerializerInternalBase.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\JsonSerializerInternalWriter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\JsonSerializerProxy.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\JsonStringContract.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\JsonTypeReflector.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\MemoryTraceWriter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\NamingStrategy.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\ObjectConstructor.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\OnErrorAttribute.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\ReflectionAttributeProvider.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\ReflectionValueProvider.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\SerializationBinderAdapter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\SnakeCaseNamingStrategy.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\TraceJsonReader.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Serialization\TraceJsonWriter.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\StringEscapeHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\TraceLevel.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\TypeNameAssemblyFormatHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\TypeNameHandling.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\AsyncUtils.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\Base64Encoder.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\BidirectionalDictionary.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\CollectionUtils.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\CollectionWrapper.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\ConvertUtils.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\DateTimeParser.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\DateTimeUtils.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\DictionaryWrapper.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\DynamicProxy.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\DynamicProxyMetaObject.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\DynamicReflectionDelegateFactory.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\DynamicUtils.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\EnumUtils.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\EnumValue.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\ExpressionReflectionDelegateFactory.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\FSharpUtils.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\ILGeneratorExtensions.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\ImmutableCollectionsUtils.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\JavaScriptUtils.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\JsonTokenUtils.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\LateBoundReflectionDelegateFactory.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\LinqBridge.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\MathUtils.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\MethodBinder.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\MethodCall.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\MiscellaneousUtils.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\PropertyNameTable.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\ReflectionDelegateFactory.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\ReflectionObject.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\ReflectionUtils.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\StringBuffer.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\StringReference.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\StringUtils.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\ThreadSafeStore.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\TypeExtensions.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\Utilities\ValidationUtils.cs" />
+    <Compile Include="Newtonsoft\Json\Newtonsoft.Json\WriteState.cs" />
+    <Compile Include="OApis\GoogleApiTokenInfo.cs" />
+    <Compile Include="OApis\GoogleDrive\GoogleDriveStructure.cs" />
+    <Compile Include="OApis\GoogleMail\GoogleMailStructure.cs" />
+    <Compile Include="OApis\GooglePeople\GooglePeopleStructure.cs" />
+    <Compile Include="OApis\GoogleUrlShortener\GoogleUrlShortenerStructure.cs" />
+    <Compile Include="OApis\orrGoogleAuthorization.cs" />
+    <Compile Include="OApis\GoogleQPX\GoogleQPXStructure.cs" />
+    <Compile Include="OApis\YouTube\YouTubeStructure.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AuthorizationDialog.resx">
+      <DependentUpon>AuthorizationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoogleR.resx">
+      <DependentUpon>GoogleR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Newtonsoft\Json\Newtonsoft.Json\Dynamic.snk" />
+    <None Include="Newtonsoft\Json\Newtonsoft.Json\Newtonsoft.Json.ruleset" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Newtonsoft\Json\Newtonsoft.Json\Newtonsoft.Json.csproj" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
